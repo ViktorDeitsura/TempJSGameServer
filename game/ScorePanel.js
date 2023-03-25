@@ -44,7 +44,6 @@
     });
 
     ScorePanel.addSpriteToScore = function( _val ) {//create sprites for score
-        console.log(_val);
         var valString = _val+"";
         var arrForImage = [];
 

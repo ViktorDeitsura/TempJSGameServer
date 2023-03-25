@@ -48,7 +48,6 @@
         this.group.interactive = true;
         this.group.on( "pointerdown", function(e){ self.onClickDown(e); } );
         this.group.on( "pointerup",   function(e){ self.onClickUp  (e); } );
-        console.log(this.group);
     };
 
     Game.prototype.showSprites = function( _spriteParams, _container ) {//create textute sprite with the given parameters
@@ -99,7 +98,6 @@
         if ( this.animation ) {
             return;
         }
-        console.log(this);
         this.eventClickX = Math.floor( _evt.data.global.x );
         this.eventClickY = Math.floor( _evt.data.global.y );
     };
@@ -139,7 +137,6 @@
                     }
                 }
             }
-            console.log("makeStep LEFT");
         } else if ( _direction == Consts.STEP_DIRECTION_RIGHT ) {
             for ( var j = 0; j < this.tilesOnField.length; j++ ) {
                 for ( var i = this.tilesOnField[j].length-1; i >= 0; i-- ) {
@@ -149,7 +146,6 @@
                     }
                 }
             }
-            console.log("makeStep RIGHT");
         } else if ( _direction == Consts.STEP_DIRECTION_DOWN ) {
             for ( var j = 0; j < this.tilesOnField.length; j++ ) {
                 for ( var i = this.tilesOnField.length-1; i >= 0; i-- ) {
@@ -159,7 +155,6 @@
                     }
                 }
             }
-            console.log("makeStep DOWN");
         } else if ( _direction == Consts.STEP_DIRECTION_UP ) {
             for ( var j = 0; j < this.tilesOnField.length; j++ ) {
                 for ( var i = 0; i < this.tilesOnField.length; i++ ) {
@@ -169,7 +164,6 @@
                     }
                 }
             }
-            console.log("makeStep UP");
         }
     };
 
@@ -304,7 +298,6 @@
     };
 
     Game.prototype.renewalObjectTiles = function() {
-        console.log(this.tilesObj.length);
         var rere = 0;
         for ( var i = 0; i < this.tilesObj.length; i++ ) {
             if ( this.tilesObj[i].sprite == null && this.tilesObj[i].count == null ) {
@@ -320,7 +313,6 @@
             }
             rere++;
         }
-        console.log(rere);
     };
 
     Game.prototype.checkGameOver = function() {

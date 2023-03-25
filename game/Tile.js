@@ -42,7 +42,6 @@
             }
             if ( Main.game.spawnTileSys ) {
                 Main.game.spawnTileSys = false;
-                console.log("Main.game.spawnTileSys");
                 var tileIndex = Main.game.searchFreePlaceForTile();
                 Main.game.addTileToField( tileIndex );
                 Main.game.renewalObjectTiles();
