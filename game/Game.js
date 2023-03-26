@@ -298,7 +298,6 @@
     };
 
     Game.prototype.renewalObjectTiles = function() {
-        var rere = 0;
         for ( var i = 0; i < this.tilesObj.length; i++ ) {
             if ( this.tilesObj[i].sprite == null && this.tilesObj[i].count == null ) {
                 this.tilesObj.splice( i, 1 );
@@ -311,7 +310,6 @@
                     break;
                 }
             }
-            rere++;
         }
     };
 
